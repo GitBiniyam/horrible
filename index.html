@@ -55,7 +55,7 @@
         color: yellow;
         background: red;
       }
-      button:hover{
+      .like-button:hover{
         transform: translateX(150px);
       }
       .gift {
@@ -100,9 +100,10 @@ background-color: rgb(123, 229, 255);
   font-size: 5rem !important;
 }
 #haharick video{
-  height: 100%;
+  height: 100% !important;
   z-index: 99;
-  width: 100%;
+  position: fixed;
+  width: 100% !important;
 }
 @media only screen and (min-width: 450px) {
   .image-container img{
@@ -124,7 +125,7 @@ background-color: rgb(123, 229, 255);
   <body>
     <div id="haharick">
       <h1 onclick="hideme()">X</h1>
-      <video width="640" height="360" autoplay loop>
+      <video width="640" height="360" autoplay muted loop>
            <source src="webmedia/R.mp4" type="video/mp4" />
       </video>
 
@@ -133,11 +134,11 @@ background-color: rgb(123, 229, 255);
         <video width="640" height="360" autoplay muted controls>
              <source src="webmedia/Ishowspeed-Barking.m4v" type="video/mp4" />
         </video>
-        <button id="closeadvert" >X</button>
+        <button id="closeadvert" onclick="hidespeed()" >X</button>
         <h1>69% OFF </h1>
 
     </div>
-      <h1 style="color: #976060">instagrm.Jemo</h1>
+      <h1 style="color: #976060">make you suffer . hr,jdjlf</h1>
     </header>
     <p style="color: #800000">
       instagrm clone
@@ -147,20 +148,20 @@ background-color: rgb(123, 229, 255);
 
 
       <div class="image-container">   
-      <img src="webmedia/hor.jpg" alt="" />
-      <span>rate my rizz 1-10</span>
+      <img src="webmedia/simp1.jpg" alt="" />
+      <span>rate rizz 1-10</span>
         <button class="like-button" onclick="toggleLike()">Like</button>(4)
       </div>
 
 
       <div class="image-container">
         <img src="webmedia/hor.jpg" alt="" />
-        <span>rate my rizz 1-10</span>
+        <span>rizzler 1-10</span>
         <button class="like-button" onclick="toggleLike()">Like</button>(3)
       </div>
 
       <div id="video-container">
-        <h2>how you like me now</h2>
+        <h2>how yu lke me now</h2>
 
         <video width="640" height="360" controls>
           <source src="webmedia/gif.mp4" type="video/mp4" />
@@ -170,6 +171,16 @@ background-color: rgb(123, 229, 255);
         <button class="like-button" onclick="toggleLike()">Like</button>(41)
       </div>
       <script>
+        const showspeed =() => {
+          var advert = document.getElementById("advert");
+          advert.style.display = "block";
+        }
+        const hidespeed =() => {
+          var advert = document.getElementById("advert");
+          advert.style.display = "none";
+          setTimeout(function() {
+          showspeed();}, 7000);
+        }
         
         const hideme =() => {
           var haharick = document.getElementById("haharick");
@@ -177,10 +188,10 @@ background-color: rgb(123, 229, 255);
           setTimeout(function() {
           showme();}, 5000);
         }
-        hideme();
+      
         const showme =() => {
           var haharick = document.getElementById("haharick");
-          haharick.style.display = "none";
+          haharick.style.display = "block";
         }
         var isLiked = false;
 
@@ -205,7 +216,7 @@ background-color: rgb(123, 229, 255);
 
     <footer>
       <p style="color: #8b0000">
-        Enter Phone number sir
+        Entr telebir number! Win 9033GB very leigt 100%
       </p>
       <input
         type="range"
@@ -256,6 +267,7 @@ background-color: rgb(123, 229, 255);
       <br>
       <br>
       <br>
+      <span>1948 @Copyright <a href="">Cushy Dev</a> & <a href="">Fira Flash</a></span>
     </footer>
   </body>
 </html>
